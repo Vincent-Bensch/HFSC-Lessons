@@ -34,10 +34,18 @@ namespace HFSCLessonSignup {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::TabControl^  tabControl1;
+	private: System::Windows::Forms::TabControl^  TabControl;
 	protected:
-	private: System::Windows::Forms::TabPage^  tabPage1;
-	private: System::Windows::Forms::TabPage^  tabPage2;
+
+	private: System::Windows::Forms::TabPage^  StudentTab;
+	private: System::Windows::Forms::TabPage^  SessionTab;
+	private: System::Windows::Forms::Panel^  SearchPanel;
+	private: System::Windows::Forms::Panel^  RegistrationPanel;
+	private: System::Windows::Forms::Panel^  SessionCreate;
+	private: System::Windows::Forms::Panel^  ScessionEdit;
+	protected:
+
+
 
 
 	private:
@@ -53,53 +61,97 @@ namespace HFSCLessonSignup {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
-			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->tabControl1->SuspendLayout();
+			this->TabControl = (gcnew System::Windows::Forms::TabControl());
+			this->StudentTab = (gcnew System::Windows::Forms::TabPage());
+			this->SessionTab = (gcnew System::Windows::Forms::TabPage());
+			this->SearchPanel = (gcnew System::Windows::Forms::Panel());
+			this->RegistrationPanel = (gcnew System::Windows::Forms::Panel());
+			this->ScessionEdit = (gcnew System::Windows::Forms::Panel());
+			this->SessionCreate = (gcnew System::Windows::Forms::Panel());
+			this->TabControl->SuspendLayout();
+			this->StudentTab->SuspendLayout();
+			this->SessionTab->SuspendLayout();
 			this->SuspendLayout();
 			// 
-			// tabControl1
+			// TabControl
 			// 
-			this->tabControl1->Controls->Add(this->tabPage1);
-			this->tabControl1->Controls->Add(this->tabPage2);
-			this->tabControl1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tabControl1->Location = System::Drawing::Point(0, 0);
-			this->tabControl1->Name = L"tabControl1";
-			this->tabControl1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->tabControl1->SelectedIndex = 0;
-			this->tabControl1->Size = System::Drawing::Size(877, 456);
-			this->tabControl1->TabIndex = 0;
+			this->TabControl->Controls->Add(this->StudentTab);
+			this->TabControl->Controls->Add(this->SessionTab);
+			this->TabControl->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->TabControl->Location = System::Drawing::Point(0, 0);
+			this->TabControl->Name = L"TabControl";
+			this->TabControl->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->TabControl->SelectedIndex = 0;
+			this->TabControl->Size = System::Drawing::Size(877, 456);
+			this->TabControl->TabIndex = 0;
 			// 
-			// tabPage1
+			// StudentTab
 			// 
-			this->tabPage1->Location = System::Drawing::Point(4, 25);
-			this->tabPage1->Name = L"tabPage1";
-			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(869, 427);
-			this->tabPage1->TabIndex = 0;
-			this->tabPage1->Text = L"tabPage1";
-			this->tabPage1->UseVisualStyleBackColor = true;
+			this->StudentTab->Controls->Add(this->SearchPanel);
+			this->StudentTab->Controls->Add(this->RegistrationPanel);
+			this->StudentTab->Location = System::Drawing::Point(4, 25);
+			this->StudentTab->Name = L"StudentTab";
+			this->StudentTab->Padding = System::Windows::Forms::Padding(3);
+			this->StudentTab->Size = System::Drawing::Size(869, 427);
+			this->StudentTab->TabIndex = 0;
+			this->StudentTab->Text = L"Student Menu";
+			this->StudentTab->UseVisualStyleBackColor = true;
 			// 
-			// tabPage2
+			// SessionTab
 			// 
-			this->tabPage2->Location = System::Drawing::Point(4, 25);
-			this->tabPage2->Name = L"tabPage2";
-			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(869, 427);
-			this->tabPage2->TabIndex = 1;
-			this->tabPage2->Text = L"tabPage2";
-			this->tabPage2->UseVisualStyleBackColor = true;
+			this->SessionTab->Controls->Add(this->SessionCreate);
+			this->SessionTab->Controls->Add(this->ScessionEdit);
+			this->SessionTab->Location = System::Drawing::Point(4, 25);
+			this->SessionTab->Name = L"SessionTab";
+			this->SessionTab->Padding = System::Windows::Forms::Padding(3);
+			this->SessionTab->Size = System::Drawing::Size(869, 427);
+			this->SessionTab->TabIndex = 1;
+			this->SessionTab->Text = L"Session Menu";
+			this->SessionTab->UseVisualStyleBackColor = true;
+			// 
+			// SearchPanel
+			// 
+			this->SearchPanel->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->SearchPanel->Location = System::Drawing::Point(3, 3);
+			this->SearchPanel->Name = L"SearchPanel";
+			this->SearchPanel->Size = System::Drawing::Size(863, 421);
+			this->SearchPanel->TabIndex = 0;
+			// 
+			// RegistrationPanel
+			// 
+			this->RegistrationPanel->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->RegistrationPanel->Location = System::Drawing::Point(3, 3);
+			this->RegistrationPanel->Name = L"RegistrationPanel";
+			this->RegistrationPanel->Size = System::Drawing::Size(863, 421);
+			this->RegistrationPanel->TabIndex = 0;
+			// 
+			// ScessionEdit
+			// 
+			this->ScessionEdit->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->ScessionEdit->Location = System::Drawing::Point(3, 3);
+			this->ScessionEdit->Name = L"ScessionEdit";
+			this->ScessionEdit->Size = System::Drawing::Size(863, 421);
+			this->ScessionEdit->TabIndex = 0;
+			// 
+			// SessionCreate
+			// 
+			this->SessionCreate->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->SessionCreate->Location = System::Drawing::Point(3, 3);
+			this->SessionCreate->Name = L"SessionCreate";
+			this->SessionCreate->Size = System::Drawing::Size(863, 421);
+			this->SessionCreate->TabIndex = 0;
 			// 
 			// StudentSearch
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(877, 456);
-			this->Controls->Add(this->tabControl1);
+			this->Controls->Add(this->TabControl);
 			this->Name = L"StudentSearch";
 			this->Text = L"StudentSearch";
-			this->tabControl1->ResumeLayout(false);
+			this->TabControl->ResumeLayout(false);
+			this->StudentTab->ResumeLayout(false);
+			this->SessionTab->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
