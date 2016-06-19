@@ -130,17 +130,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Student Search.cpp" />
+    <ClCompile Include="UI-Interface.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Student Search.h">
+    <ClInclude Include="UI-Interface.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Student Search.resx">
-      <DependentUpon>Student Search.h</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
