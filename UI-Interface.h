@@ -63,11 +63,11 @@ namespace HFSCLessonSignup {
 		{
 			this->TabControl = (gcnew System::Windows::Forms::TabControl());
 			this->StudentTab = (gcnew System::Windows::Forms::TabPage());
-			this->SessionTab = (gcnew System::Windows::Forms::TabPage());
 			this->SearchPanel = (gcnew System::Windows::Forms::Panel());
 			this->RegistrationPanel = (gcnew System::Windows::Forms::Panel());
-			this->ScessionEdit = (gcnew System::Windows::Forms::Panel());
+			this->SessionTab = (gcnew System::Windows::Forms::TabPage());
 			this->SessionCreate = (gcnew System::Windows::Forms::Panel());
+			this->ScessionEdit = (gcnew System::Windows::Forms::Panel());
 			this->TabControl->SuspendLayout();
 			this->StudentTab->SuspendLayout();
 			this->SessionTab->SuspendLayout();
@@ -97,18 +97,6 @@ namespace HFSCLessonSignup {
 			this->StudentTab->Text = L"Student Menu";
 			this->StudentTab->UseVisualStyleBackColor = true;
 			// 
-			// SessionTab
-			// 
-			this->SessionTab->Controls->Add(this->SessionCreate);
-			this->SessionTab->Controls->Add(this->ScessionEdit);
-			this->SessionTab->Location = System::Drawing::Point(4, 25);
-			this->SessionTab->Name = L"SessionTab";
-			this->SessionTab->Padding = System::Windows::Forms::Padding(3);
-			this->SessionTab->Size = System::Drawing::Size(869, 427);
-			this->SessionTab->TabIndex = 1;
-			this->SessionTab->Text = L"Session Menu";
-			this->SessionTab->UseVisualStyleBackColor = true;
-			// 
 			// SearchPanel
 			// 
 			this->SearchPanel->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -125,13 +113,17 @@ namespace HFSCLessonSignup {
 			this->RegistrationPanel->Size = System::Drawing::Size(863, 421);
 			this->RegistrationPanel->TabIndex = 0;
 			// 
-			// ScessionEdit
+			// SessionTab
 			// 
-			this->ScessionEdit->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->ScessionEdit->Location = System::Drawing::Point(3, 3);
-			this->ScessionEdit->Name = L"ScessionEdit";
-			this->ScessionEdit->Size = System::Drawing::Size(863, 421);
-			this->ScessionEdit->TabIndex = 0;
+			this->SessionTab->Controls->Add(this->SessionCreate);
+			this->SessionTab->Controls->Add(this->ScessionEdit);
+			this->SessionTab->Location = System::Drawing::Point(4, 25);
+			this->SessionTab->Name = L"SessionTab";
+			this->SessionTab->Padding = System::Windows::Forms::Padding(3);
+			this->SessionTab->Size = System::Drawing::Size(869, 427);
+			this->SessionTab->TabIndex = 1;
+			this->SessionTab->Text = L"Session Menu";
+			this->SessionTab->UseVisualStyleBackColor = true;
 			// 
 			// SessionCreate
 			// 
@@ -141,6 +133,14 @@ namespace HFSCLessonSignup {
 			this->SessionCreate->Size = System::Drawing::Size(863, 421);
 			this->SessionCreate->TabIndex = 0;
 			// 
+			// ScessionEdit
+			// 
+			this->ScessionEdit->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->ScessionEdit->Location = System::Drawing::Point(3, 3);
+			this->ScessionEdit->Name = L"ScessionEdit";
+			this->ScessionEdit->Size = System::Drawing::Size(863, 421);
+			this->ScessionEdit->TabIndex = 0;
+			// 
 			// StudentSearch
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -148,7 +148,7 @@ namespace HFSCLessonSignup {
 			this->ClientSize = System::Drawing::Size(877, 456);
 			this->Controls->Add(this->TabControl);
 			this->Name = L"StudentSearch";
-			this->Text = L"StudentSearch";
+			this->Text = L"HFSC Lesson Signup";
 			this->TabControl->ResumeLayout(false);
 			this->StudentTab->ResumeLayout(false);
 			this->SessionTab->ResumeLayout(false);
